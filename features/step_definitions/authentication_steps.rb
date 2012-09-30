@@ -15,9 +15,9 @@ Given /^the user has an account$/ do
                       password: "foobar", password_confirmation: "foobar")
 end
 
-When /^the user submits valid signin information$/ do
+Given /^the user submits valid signin information$/ do
   fill_in "Email",    with: @user.email
-  fill_in "Password", with: @user.password 
+  fill_in "Password", with: @user.password
   click_button "Sign in"
 end
 
@@ -28,4 +28,3 @@ end
 Then /^he should see a signout link$/ do
   page.should have_link('Sign out', href: signout_path)
 end
-

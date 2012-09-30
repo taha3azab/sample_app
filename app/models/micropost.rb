@@ -14,5 +14,3 @@ class Micropost < ActiveRecord::Base
           user_id: user.id)
   end
 end
-
-
